@@ -11,3 +11,6 @@ Details can be found in the original paper: Rimehaug, Atle E., et al. "Uncoverin
 
 The kernel based methods to estimate LFPs from firing rates was firt presented in "Hagen, Espen, et al. "Brain signal predictions from multi-scale networks using a linearized framework." PLOS Computational Biology 18.8 (2022): e1010353. doi: https://doi.org/10.1371/journal.pcbi.1010353" and available here: https://github.com/LFPy/LFPykernels
 
+------------------------------
+
+In this folder we report the codes for estimating LFPs kernels from the V1 Allen Institute model
