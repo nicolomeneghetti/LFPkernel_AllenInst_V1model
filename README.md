@@ -22,6 +22,7 @@ In this folder we report the codes for estimating LFPs kernels from the V1 Allen
 
 
 ----------------------------------
-*Dependencies*
+**Dependencies**
+
 The codes in this repository are implemented in Python (Python >= 3.7 .older versions may or may not work). 
 Running all example will require LFPykernels, matplotlib, LFPy.
