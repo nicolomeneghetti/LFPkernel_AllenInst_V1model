@@ -19,3 +19,9 @@ In this folder we report the codes for estimating LFPs kernels from the V1 Allen
 1) single-layer L2/3 model.
 2) full-column L2/3 model
 3) 
+
+
+----------------------------------
+*Dependencies*
+The codes in this repository are implemented in Python (Python >= 3.7 .older versions may or may not work). 
+Running all example will require LFPykernels, matplotlib, LFPy.
