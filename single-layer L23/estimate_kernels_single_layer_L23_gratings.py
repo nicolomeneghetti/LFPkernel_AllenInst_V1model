@@ -6,9 +6,9 @@ import pandas as pd
 import pickle
 import scipy.stats as st
 
-from kernel_codes import KernelApprox, GaussCylinderPotential
-import utils_functions
-from utils_functions import (filter_connectivity, load_dataframe, filter_layer23, compute_population_parameters, 
+from Allen_Inst_V1_model_features.kernel_codes import KernelApprox, GaussCylinderPotential
+import Allen_Inst_V1_model_features.utils_functions
+from Allen_Inst_V1_model_features.utils_functions import (filter_connectivity, load_dataframe, filter_layer23, compute_population_parameters, 
                              add_mult_params, add_delay_params, get_synapse_type, load_synaptic_params, handle_missing_weight, 
                              process_synaptic_positions, process_synaptic_positions_LGN, get_spike_rate)
 
