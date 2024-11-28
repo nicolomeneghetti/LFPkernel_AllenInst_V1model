@@ -397,7 +397,7 @@ def compute_LFP_bmtk_to_population_fromV1(target_population, target_query_node_t
     num_levels = 2 # number of discrete levels in which discretizing the leak conductance changes
     X, Y, kernel_dict, probe, Vrest, dt, t_X, tau, g_eff, time_series_discretized = compute_utils_from_bmtk_to_population(target_population, target_query_node_type_id, simulation_length, dt_simulation, zaxis_rotation, num_levels)
     
-    save_folder = './only_L23/gratings/'
+    save_folder = './kernels/gratings/'
 
     save_folder += target_population+'/'+str(target_query_node_type_id)
     if not os.path.exists(save_folder):
