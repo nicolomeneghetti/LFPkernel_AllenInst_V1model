@@ -6,9 +6,9 @@ import pandas as pd
 import pickle
 import scipy.stats as st
 
-from kernel_codes import KernelApprox, GaussCylinderPotential
-import utils_functions
-from utils_functions import (filter_connectivity, load_dataframe, filter_layer23, compute_population_parameters, 
+from Allen_Inst_V1_model_features.kernel_codes import KernelApprox, GaussCylinderPotential
+import Allen_Inst_V1_model_features.utils_functions
+from Allen_Inst_V1_model_features.utils_functions import (filter_connectivity, load_dataframe, filter_layer23, compute_population_parameters, 
                              add_mult_params, add_delay_params, get_synapse_type, load_synaptic_params, handle_missing_weight, 
                              process_synaptic_positions, process_synaptic_positions_LGN, get_spike_rate)
 
@@ -23,7 +23,7 @@ def compute_utils_from_bmtk_to_population(target_population: str, target_node_id
     
     
     """Main function to process connectivity and prepare parameters."""
-    morphology_dir, dynamics_dir, template_file = utils_functions.initial_setups()
+    morphology_dir, dynamics_dir, template_file = Allen_Inst_V1_model_features.utils_functions.initial_setups()
 
     # Load connectivity data
     connectivity_files = {
@@ -96,7 +96,7 @@ def compute_utils_from_bmtk_to_population(target_population: str, target_node_id
         'max_nsegs_length': 20.,
         'tstart': 0,      # start time of simulation, recorders start at t=0
         'pt3d': True,
-        'custom_fun': [utils_functions.aibs_perisomatic_NICO],
+        'custom_fun': [Allen_Inst_V1_model_features.utils_functions.aibs_perisomatic_NICO],
         'custom_fun_args': [{"dynamics_params": params}],
         'dynamics_path' : dynamics_path
     }
