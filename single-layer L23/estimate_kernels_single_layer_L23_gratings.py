@@ -393,7 +393,7 @@ def compute_utils_from_bmtk_to_population(target_population: str, target_node_id
 def compute_LFP_bmtk_to_population_fromV1(target_population, target_query_node_type_id, zaxis_rotation, num_levels):
 
     simulation_length = 3 # seconds of simulations when V1 was presented with gratings
-    dt_simulation = 0.1 # ms: discrete time steps used in bmtk simulations
+    dt_simulation = 0.05 # ms: discrete time steps used in bmtk simulations
     num_levels = 2 # number of discrete levels in which discretizing the leak conductance changes
     X, Y, kernel_dict, probe, Vrest, dt, t_X, tau, g_eff, time_series_discretized = compute_utils_from_bmtk_to_population(target_population, target_query_node_type_id, simulation_length, dt_simulation, zaxis_rotation, num_levels)
     
