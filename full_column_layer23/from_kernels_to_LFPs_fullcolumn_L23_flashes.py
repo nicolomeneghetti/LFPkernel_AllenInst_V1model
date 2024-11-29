@@ -14,6 +14,7 @@ DT_DOWNSAMPLED = 10  # in ms
 V_REST = -72.5 # target membrane potential assumed when the kernels were estimated
 NUM_CHANNELS = 26 # number of channels
 TARGET_VECTOR = ['e23Cux2'] # target family that generates the LFP in the single layer L23 model
+NUM_LEVELS = 2
 
 spikes_tables_V1 = pd.read_pickle('./Allen_Inst_V1_model_features/L23_flashes/spike_L23_flashes.pkl')
 spikes_tables_LGN = pd.read_pickle('./Allen_Inst_V1_model_features/L23_flashes/spike_lgn_flashes.pkl')
@@ -103,12 +104,14 @@ def process_target_folder(folder, target, vector_time_normalized_levels, mem_pot
         
             print(f"Processing file {file_idx}/{len(files)} in subfolder {outer_idx}")
             # Load kernel data
-            kernel_path = os.path.join(subfolder_path, file_name)
-            with open(kernel_path, 'rb') as file:
-                kernel_data = pickle.load(file)['kernel']['GaussCylinderPotential']
-            interpolated_kernels = interpolate_kernel(kernel_data, DT_DESIRED)
-            
-            
+            # Load kernel data
+            kernel_dict = dict()
+            for lvl in range(NUM_LEVELS): 
+                kernel_path = os.path.join(folder_path, subfolder, str(lvl), file_name)
+                with open(kernel_path, 'rb') as file:
+                    kernel_data = pickle.load(file)['kernel']['GaussCylinderPotential']
+                interpolated_kernels = interpolate_kernel(kernel_data, DT_DESIRED)
+                kernel_dict[lvl] = interpolated_kernels    
             
             if(sum(spikes_tables_V1['pop_name'] == file_name)):# parliamo di un nodo in v1
                 spike_rows = spikes_tables_V1[spikes_tables_V1['pop_name'] == file_name]
@@ -154,7 +157,7 @@ def process_target_folder(folder, target, vector_time_normalized_levels, mem_pot
                 e_syn = 0
                 
             # Compute LFP
-            lfp = compute_lfp(s_rate, interpolated_kernels, mem_potentials, t_axis, e_syn, vector_time_normalized_levels)  # Example E_syn=0
+            lfp = compute_lfp(s_rate, kernel_dict, mem_potentials, t_axis, e_syn, vector_time_normalized_levels)  # Example E_syn=0
             lfp_dict[file_name] = lfp
     
     return lfp_dict
