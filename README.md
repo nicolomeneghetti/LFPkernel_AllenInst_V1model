@@ -31,4 +31,4 @@ Running all example will require LFPykernels, matplotlib, LFPy.
 
 
 ------------------------------------------
-Any bug or question? Please do not hesitate to contact me: nicolo.meneghetti@santannapisa.it
+Any bug, question, curiosity, collaboration proposals etc.? Please do not hesitate to contact me: nicolo.meneghetti@santannapisa.it
