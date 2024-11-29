@@ -17,10 +17,10 @@ The kernel based methods to estimate LFPs from firing rates was firt presented i
 
 ------------------------------
 
-In this folder we report the codes for estimating LFPs kernels from the V1 Allen Institute model. We organize this repository into 3 folders: 
+In this folder we report the codes for estimating LFPs-kernels (and consequently LFPs) from the V1 Allen Institute model. We organized this repository into 3 folders: 
 1) single-layer L2/3 model.
 2) full-column L2/3 model
-3) 
+3) full-column L4 model
 
 
 ----------------------------------
