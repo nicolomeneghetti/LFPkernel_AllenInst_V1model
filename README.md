@@ -28,3 +28,7 @@ In this folder we report the codes for estimating LFPs-kernels (and consequently
 
 The codes in this repository are implemented in Python (Python >= 3.7 .older versions may or may not work). 
 Running all example will require LFPykernels, matplotlib, LFPy.
+
+
+------------------------------------------
+Any bug or question? Please do not hesitate to contact me: nicolo.meneghetti@santannapisa.it
