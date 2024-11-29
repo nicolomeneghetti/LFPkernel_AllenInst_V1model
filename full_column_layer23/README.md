@@ -1,8 +1,8 @@
 This folder contains two types of codes. 
 
-The codes starting with "estimate_kernels_single_layer_L23 ..." contain the intructions necessary to estimate the LFP-kernels associated with the single-layer L23 Allen V1 model. One code is relative to the kernels associated with the presentation of gratings stimuli; the second one with the presentation of flash stimuli. 
+The codes starting with "estimate_kernels_full_column_L23 ..." contain the intructions necessary to estimate the LFP-kernels associated with the full_column L23 Allen V1 model. One code is relative to the kernels associated with the presentation of gratings stimuli; the second one with the presentation of flash stimuli. 
 
-The resulting kernels relative to the single-L23 model are presented in the folders: (1) gratings_kernels; (2) kernels_flashes
+The resulting kernels relative to the full_column L23 model are presented in the folders: (1) gratings_kernels; (2) kernels_flashes
 
 ---------------------------------------
 
