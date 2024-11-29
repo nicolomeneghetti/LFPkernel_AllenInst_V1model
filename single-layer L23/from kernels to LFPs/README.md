@@ -1,4 +1,4 @@
-This folder conains the LFPs estimated with (1) the kernels and (2) multicompartmental simulations using the bmtk simulator. 
+This folder contains the LFPs estimated with (1) the kernels and (2) multicompartmental simulations using the bmtk simulator. 
 
 The two folders (divided according to the two types of stimuli adopted) contains: 
 
